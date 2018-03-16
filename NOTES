@@ -1,0 +1,22 @@
+How to make Proper Build
+
+macOS:
+- npm run dist:mac
+
+------------------------------
+
+Windows:
+- npm run dist:win
+- cp LICENSE ./dist/win-unpacked
+- node scripts/installer.js
+
+
+If you get an error that says
+
+Failed with exit code: 1
+Output:
+Attempting to build package from 'icebot-shopify.nuspec'.
+File not found: 'icebot-shopify.exe'.
+
+when building the Windows version then go into /dist/win-unpacked directory and rename IceBot.exe to icebot-shopify.exe
+then run "node scripts/installer.js" again
